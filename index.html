@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IranCoin — دستیار هوشمند معاملهٔ منظبط | Disciplined Automated Trading Intelligence</title>
+<meta name="description" content="پلتفرم اجرای خودکار معامله و سیگنال‌های تحلیلی روی صرافی‌های معتبر، با کلید API محدود به معامله و بدون دسترسی برداشت. Automated execution and analytical signals with trade-only API scope — never withdrawal access.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-row">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none"><path d="M16 2 L29 9 V23 L16 30 L3 23 V9 Z" stroke="currentColor" stroke-width="1.4" opacity="0.5"/><path d="M16 8 L23 12 V20 L16 24 L9 20 V12 Z" fill="var(--gold)"/></svg>
+      <span data-en-only>IranCoin</span><span data-fa-only>آیرن‌کوین</span>
+    </a>
+
+    <nav class="nav-desktop">
+      <a href="#markets"><span data-fa-only>بازارها</span><span data-en-only>Markets</span></a>
+      <a href="#pipeline"><span data-fa-only>نحوهٔ کار</span><span data-en-only>How It Works</span></a>
+      <a href="#intelligence"><span data-fa-only>هستهٔ هوش مصنوعی</span><span data-en-only>AI Intelligence</span></a>
+      <a href="#security"><span data-fa-only>امنیت و ریسک</span><span data-en-only>Security &amp; Risk</span></a>
+      <a href="#pricing"><span data-fa-only>اشتراک</span><span data-en-only>Pricing</span></a>
+      <a href="#faq"><span data-fa-only>پرسش‌ها</span><span data-en-only>FAQ</span></a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-toggle" role="group" aria-label="Language / زبان">
+        <button class="lang-btn active" data-set-lang="fa" aria-label="فارسی">FA</button>
+        <button class="lang-btn" data-set-lang="en" aria-label="English">EN</button>
+      </div>
+      <a href="#pricing" class="btn btn-primary btn-sm">
+        <span data-fa-only>شروع کنید</span><span data-en-only>Get Started</span>
+      </a>
+      <button class="menu-btn" aria-label="menu">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 5H16M2 9H16M2 13H16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="hero-copy reveal">
+      <div class="eyebrow"><span data-fa-only>اجرای خودکار · هوش تصمیم‌یار · امنیت درجه‌یک</span><span data-en-only>Automated Execution · Decision Intelligence · Bank-Grade Security</span></div>
+      <h1>
+        <span data-fa-only>معامله‌گری <em>منظبط</em>، نه شرط‌بندی هیجانی.</span>
+        <span data-en-only>Disciplined execution. <em>Never</em> a promise of returns.</span>
+      </h1>
+      <p class="hero-lead">
+        <span data-fa-only>آیرن‌کوین سیگنال‌ها و اجرای خودکار را روی حساب صرافی خودتان پیاده می‌کند — با کلید API محدود به «فقط معامله» و بدون هیچ دسترسی برداشتی. شما همیشه مالک دارایی و تصمیم نهایی باقی می‌مانید.</span>
+        <span data-en-only>IranCoin runs signal-driven and automated execution directly on your own exchange account — using trade-only API scope, with withdrawal permissions disabled by design. You retain custody and final control at every step.</span>
+      </p>
+      <div class="hero-cta-row">
+        <a href="#pricing" class="btn btn-primary"><span data-fa-only>مشاهدهٔ پلن‌ها</span><span data-en-only>View Plans</span></a>
+        <a href="#pipeline" class="btn btn-ghost"><span data-fa-only>نحوهٔ عملکرد سیستم</span><span data-en-only>See How It Works</span></a>
+      </div>
+      <div class="hero-disclosure">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1L15 14H1L8 1Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M8 6V9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/><circle cx="8" cy="11.3" r="0.7" fill="currentColor"/></svg>
+        <span data-fa-only>معامله در بازارهای رمزارز و فارکس دارای ریسک از دست دادن سرمایه است. آیرن‌کوین ابزار اجرا و تحلیل ارائه می‌دهد، نه مشاورهٔ سرمایه‌گذاری و نه تضمین سود.</span>
+        <span data-en-only>Trading crypto and FX carries risk of capital loss. IranCoin provides execution and analytical tooling — not investment advice, and not a guarantee of profit.</span>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <canvas id="heroCanvas" aria-hidden="true"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST BAR ================= -->
+<div class="trust-bar">
+  <div class="container trust-row">
+    <div class="trust-item reveal">
+      <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M8.5 1.5L15 4.5V8.5C15 12 12.2 15 8.5 16C4.8 15 2 12 2 8.5V4.5L8.5 1.5Z" stroke="currentColor" stroke-width="1.2"/></svg>
+      <span data-fa-only>کلید API فقط با مجوز معامله — بدون برداشت</span><span data-en-only>Trade-only API scope — withdrawals disabled</span>
+    </div>
+    <div class="trust-item reveal">
+      <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><rect x="2" y="7" width="13" height="8" rx="1.5" stroke="currentColor" stroke-width="1.2"/><path d="M5 7V5a3.5 3.5 0 0 1 7 0v2" stroke="currentColor" stroke-width="1.2"/></svg>
+      <span data-fa-only>رمزنگاری در حالت سکون + مدیریت کلید اختصاصی</span><span data-en-only>Encrypted at rest with dedicated key management</span>
+    </div>
+    <div class="trust-item reveal">
+      <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><circle cx="8.5" cy="8.5" r="6.5" stroke="currentColor" stroke-width="1.2"/><path d="M8.5 5V8.5L11 10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+      <span data-fa-only>ثبت رویداد و ممیزی کامل برای هر تصمیم</span><span data-en-only>Full audit trail for every decision and action</span>
+    </div>
+    <div class="trust-item reveal">
+      <svg width="17" height="17" viewBox="0 0 17 17" fill="none"><path d="M2 8.5L6 12.5L15 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span data-fa-only>حسابداری در سمت شما — مالکیت دارایی همیشه با شماست</span><span data-en-only>Custody stays with you — always</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= MARKETS / MODES ================= -->
+<section class="section" id="markets">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span data-fa-only>پوشش بازار</span><span data-en-only>Market Coverage</span></div>
+      <h2 class="section-title"><span data-fa-only>هر بازار، با واژگان درست خودش</span><span data-en-only>Every market, explained in its own vocabulary</span></h2>
+      <p class="section-desc"><span data-fa-only>اسپات با فیوچرز یکسان نیست، و فارکس با لات‌سایز و مارجین رفتار می‌کند نه «قرارداد رمزارزی». آیرن‌کوین هر حالت را با اصطلاحات دقیق خودش توضیح می‌دهد.</span><span data-en-only>Spot is not futures, and FX behaves through lot size and margin — not crypto contract logic. Each mode below is described in its own precise terms, never forced into a shared template.</span></p>
+    </div>
+
+    <div class="tabs-bar reveal" role="tablist">
+      <button class="tab-btn active" data-tab="crypto"><span data-fa-only>رمزارز</span><span data-en-only>Crypto</span></button>
+      <button class="tab-btn" data-tab="forex"><span data-fa-only>فارکس / MT5</span><span data-en-only>Forex / MT5</span></button>
+      <button class="tab-btn" data-tab="signals"><span data-fa-only>سیگنال</span><span data-en-only>Signals</span></button>
+    </div>
+
+    <div class="tab-panel active" data-panel="crypto">
+      <div class="mode-grid reveal-stagger">
+        <div class="mode-card">
+          <div class="mode-card-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.3"/><path d="M10 5.5V14.5M7 8.2C7 6.9 8.3 6 10 6C11.9 6 13 6.9 13 8C13 10 7 9.6 7 11.6C7 12.9 8.3 13.6 10 13.6C11.7 13.6 13 12.9 13 11.6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg></div>
+          <h3><span data-fa-only>اسپات</span><span data-en-only>Spot</span></h3>
+          <p><span data-fa-only>خرید یا فروش مستقیم دارایی زیربنایی طبق مکانیزم صرافی — بدون موقعیت اهرم‌دار مشتقه.</span><span data-en-only>Buys or sells the underlying asset directly per exchange mechanics — no leveraged derivative position involved.</span></p>
+        </div>
+        <div class="mode-card">
+          <div class="mode-card-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 15L8 8L12 11L17 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 4H17V8" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3><span data-fa-only>پرپچوال / فیوچرز</span><span data-en-only>Perpetual / Futures</span></h3>
+          <p><span data-fa-only>قرارداد اهرم‌دار با ریسک نقدشوندگی، مارجین و فاندینگ. مالکیت دارایی زیربنایی مانند اسپات نیست.</span><span data-en-only>Leveraged contracts carrying liquidation risk, margin, and funding. Underlying ownership differs fundamentally from spot.</span></p>
+        </div>
+        <div class="mode-card">
+          <div class="mode-card-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="3" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.3"/><rect x="11" y="11" width="6" height="6" rx="1" stroke="currentColor" stroke-width="1.3"/><path d="M9 6H14V11" stroke="currentColor" stroke-width="1.3"/></svg></div>
+          <h3><span data-fa-only>ترکیبی (هیبرید)</span><span data-en-only>Hybrid</span></h3>
+          <p><span data-fa-only>تخصیص همزمان به اسپات و فیوچرز برای اجرای راهبردی متفاوت — بدون ادعای کاهش خودکار ریسک.</span><span data-en-only>Concurrent spot and futures allocation for strategy-specific execution — never marketed as an automatic risk reducer.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="forex">
+      <div class="mode-grid reveal-stagger">
+        <div class="mode-card">
+          <div class="mode-card-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10H16M4 10L8 6M4 10L8 14M16 10L12 6M16 10L12 14" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3><span data-fa-only>اکسپرت ادوایزر (EA)</span><span data-en-only>Expert Advisor (EA)</span></h3>
+          <p><span data-fa-only>برنامهٔ معاملهٔ خودکار در محیط متاتریدر — با تشخیص دقیق وضعیت اتصال ترمینال، کارگزار و اجرا.</span><span data-en-only>An automated program running inside MetaTrader — with precise diagnostics for terminal, broker, and execution state.</span></p>
+        </div>
+        <div class="mode-card">
+          <div class="mode-card-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.3"/><path d="M10 6V10L13 12" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+          <h3><span data-fa-only>لات، مارجین و اهرم</span><span data-en-only>Lot, Margin &amp; Leverage</span></h3>
+          <p><span data-fa-only>سایز قرارداد، اسپرد، اسلیپیج، حد ضرر و حد سود با مثال ساده و زبان انسانی توضیح داده می‌شود.</span><span data-en-only>Contract size, spread, slippage, stop-loss and take-profit — explained in plain language with worked examples.</span></p>
+        </div>
+        <div class="mode-card">
+          <div class="mode-card-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3L11.6 8.1L17 8.1L12.7 11.2L14.3 16.3L10 13.2L5.7 16.3L7.3 11.2L3 8.1L8.4 8.1L10 3Z" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg></div>
+          <h3><span data-fa-only>تشخیص وضعیت اتصال</span><span data-en-only>Connection Diagnostics</span></h3>
+          <p><span data-fa-only>افلاین بودن ترمینال، بسته‌بودن بازار، عدم تطابق نماد یا مجوز و خطای مارجین به‌روشنی گزارش می‌شود.</span><span data-en-only>Terminal offline, market closed, symbol unavailable, permission denied, or margin errors are surfaced clearly.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" data-panel="signals">
+      <div class="mode-grid reveal-stagger">
+        <div class="mode-card">
+          <div class="mode-card-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 12L7 8L10 11L17 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="4" r="1.4" fill="currentColor"/></svg></div>
+          <h3><span data-fa-only>سیگنال به‌عنوان یک شیء اطلاعاتی</span><span data-en-only>Signal as a Data Object</span></h3>
+          <p><span data-fa-only>هر سیگنال شامل زمان صدور، بازار، جهت، شرط ابطال و منبع راهبرد است — نه یک درصد اطمینان بی‌مبنا.</span><span data-en-only>Each signal carries emission time, market, direction, invalidation condition and strategy source — never an unjustified confidence percentage.</span></p>
+        </div>
+        <div class="mode-card">
+          <div class="mode-card-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M3 8H17" stroke="currentColor" stroke-width="1.3"/></svg></div>
+          <h3><span data-fa-only>تاریخچهٔ تغییرناپذیر</span><span data-en-only>Immutable History</span></h3>
+          <p><span data-fa-only>ویرایش سیگنال گذشته وجود ندارد؛ هر تغییر یک رکورد بازبینی جدید با زمان‌مهر ثبت می‌کند.</span><span data-en-only>Past signals are never silently edited — every change creates a timestamped revision record.</span></p>
+        </div>
+        <div class="mode-card">
+          <div class="mode-card-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 3V10L14 13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="1.3"/></svg></div>
+          <h3><span data-fa-only>تفکیک زمان صدور و اجرا</span><span data-en-only>Emission vs. Execution Time</span></h3>
+          <p><span data-fa-only>تأخیر شبکه می‌تواند شرایط بازار را تغییر دهد؛ زمان صدور، دریافت و اجرا جداگانه ثبت می‌شود.</span><span data-en-only>Network latency can shift market state — emission, receipt, and execution time are logged separately.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PIPELINE ================= -->
+<section class="section" id="pipeline">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span data-fa-only>مسیر اجرا</span><span data-en-only>Execution Path</span></div>
+      <h2 class="section-title"><span data-fa-only>از پیکربندی تا اجرا، پنج مرحلهٔ قابل ممیزی</span><span data-en-only>From setup to execution — five auditable stages</span></h2>
+    </div>
+    <div class="pipeline reveal">
+      <div class="pipe-step">
+        <div class="pipe-num">01</div>
+        <h4><span data-fa-only>انتخاب بازار و حالت</span><span data-en-only>Select Market &amp; Mode</span></h4>
+        <p><span data-fa-only>خانوادهٔ محصول، نوع بازار و حالت اجرا را مشخص می‌کنید.</span><span data-en-only>Choose product family, market type and execution mode.</span></p>
+      </div>
+      <div class="pipe-step">
+        <div class="pipe-num">02</div>
+        <h4><span data-fa-only>اتصال کلید API محدود</span><span data-en-only>Connect Scoped API Key</span></h4>
+        <p><span data-fa-only>کلید فقط با مجوز معامله ایجاد و به‌صورت رمزنگاری‌شده ذخیره می‌شود.</span><span data-en-only>A trade-only key is issued and stored encrypted end-to-end.</span></p>
+      </div>
+      <div class="pipe-step">
+        <div class="pipe-num">03</div>
+        <h4><span data-fa-only>ارزیابی راهبردی</span><span data-en-only>Strategy Evaluation</span></h4>
+        <p><span data-fa-only>سیگنال در برابر معیارهای از پیش‌تعریف‌شده بررسی می‌شود.</span><span data-en-only>Setups are checked against predefined validation criteria.</span></p>
+      </div>
+      <div class="pipe-step">
+        <div class="pipe-num">04</div>
+        <h4><span data-fa-only>کنترل ریسک و اندازهٔ پوزیشن</span><span data-en-only>Risk &amp; Position Sizing</span></h4>
+        <p><span data-fa-only>محدودیت‌های اهرم، مارجین و ضرر تعیین‌شده توسط شما اعمال می‌شود.</span><span data-en-only>Your leverage, margin and loss-limit rules are applied.</span></p>
+      </div>
+      <div class="pipe-step">
+        <div class="pipe-num">05</div>
+        <h4><span data-fa-only>اجرا و ثبت ممیزی</span><span data-en-only>Execution &amp; Audit Log</span></h4>
+        <p><span data-fa-only>سفارش روی حساب شما اجرا و رویداد به‌طور کامل ثبت می‌شود.</span><span data-en-only>The order executes on your account; the event is fully logged.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AI INTELLIGENCE ================= -->
+<section class="section" id="intelligence">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span data-fa-only>معماری تصمیم‌یار</span><span data-en-only>Decision-Support Architecture</span></div>
+      <h2 class="section-title"><span data-fa-only>سه لایهٔ تخصصی، نه یک «جعبهٔ سیاه»</span><span data-en-only>Three specialized layers — never a single black box</span></h2>
+      <p class="section-desc"><span data-fa-only>هر لایه خروجی مشخص، قابل ممیزی و بدون ادعای خطاناپذیری دارد. لایهٔ هماهنگ‌کننده، ناسازگاری، خطا یا داده کهنه را طبق سیاست مشخص مدیریت می‌کند.</span><span data-en-only>Each layer produces a defined, auditable output — none of them claim infallibility. An orchestration layer reconciles disagreement, failure, or stale data under a documented policy.</span></p>
+    </div>
+
+    <div class="agents-wrap">
+      <div class="orbital-visual reveal">
+        <canvas id="orbitalCanvas" aria-hidden="true"></canvas>
+      </div>
+      <div class="agent-list reveal-stagger">
+        <div class="agent-card">
+          <div class="agent-dot" style="background:var(--gold)"></div>
+          <div>
+            <h4><span data-fa-only>هوش راهبردی (Strategy Intelligence)</span><span data-en-only>Strategy Intelligence</span></h4>
+            <p><span data-fa-only>بررسی می‌کند آیا وضعیت بازار با معیارهای راهبرد مطابقت دارد و می‌تواند تأیید، رد، تأخیر یا درخواست دادهٔ بیشتر را برگرداند.</span><span data-en-only>Evaluates whether a market setup meets strategy criteria — returning approve, reject, delay, or request-more-data.</span></p>
+          </div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-dot" style="background:var(--cyan)"></div>
+          <div>
+            <h4><span data-fa-only>هوش ریسک و سرمایه</span><span data-en-only>Risk &amp; Capital Intelligence</span></h4>
+            <p><span data-fa-only>اندازهٔ پوزیشن، مارجین، اهرم، همبستگی و محدودیت ضرر تعیین‌شده توسط کاربر را ارزیابی می‌کند.</span><span data-en-only>Assesses position sizing, margin, leverage, correlation, and user-defined loss limits.</span></p>
+          </div>
+        </div>
+        <div class="agent-card">
+          <div class="agent-dot" style="background:var(--positive)"></div>
+          <div>
+            <h4><span data-fa-only>هوش بنیادی و ژورنال</span><span data-en-only>Fundamental &amp; Journal Intelligence</span></h4>
+            <p><span data-fa-only>داده‌های تأییدشدهٔ بازار و اخبار رسمی را با زمان‌مهر و سطح اطمینان به لایهٔ راهبرد تحویل می‌دهد.</span><span data-en-only>Delivers approved market data and official releases to the strategy layer, with source timestamps and confidence metadata.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SECURITY & RISK ================= -->
+<section class="section" id="security">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span data-fa-only>امنیت و کنترل ریسک</span><span data-en-only>Security &amp; Risk Control</span></div>
+      <h2 class="section-title"><span data-fa-only>دفاع در عمق، نه یک وعدهٔ بازاریابی</span><span data-en-only>Defense in depth, not a marketing promise</span></h2>
+    </div>
+    <div class="feature-grid reveal-stagger">
+      <div class="feature-cell">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="9" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M6.5 9V6.5a4.5 4.5 0 0 1 9 0V9" stroke="currentColor" stroke-width="1.3"/></svg>
+        <h4><span data-fa-only>رمزنگاری پوششی کلیدها</span><span data-en-only>Envelope-Encrypted Secrets</span></h4>
+        <p><span data-fa-only>هر کلید API با یک کلید رمزنگاری داده محافظت‌شده توسط KMS ذخیره می‌شود.</span><span data-en-only>Every API secret is protected by a data-encryption key under KMS control.</span></p>
+      </div>
+      <div class="feature-cell">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2L19 6V11C19 15.5 15.6 19.3 11 20C6.4 19.3 3 15.5 3 11V6L11 2Z" stroke="currentColor" stroke-width="1.3"/><path d="M7.5 11L10 13.5L14.5 8.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h4><span data-fa-only>حداقل دسترسی، بدون برداشت</span><span data-en-only>Least Privilege, No Withdrawal</span></h4>
+        <p><span data-fa-only>کلیدها فقط با کمترین مجوز لازم و بدون قابلیت برداشت ایجاد می‌شوند.</span><span data-en-only>Keys are issued with the minimum permissions needed — withdrawal disabled by policy.</span></p>
+      </div>
+      <div class="feature-cell">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.3"/><path d="M11 6V11L14.5 13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        <h4><span data-fa-only>نشست کوتاه‌مدت و بازیابی توکن</span><span data-en-only>Short-Lived Sessions</span></h4>
+        <p><span data-fa-only>توکن‌های دسترسی کوتاه‌مدت با چرخش توکن بازیابی و مدیریت دستگاه/نشست.</span><span data-en-only>Short-lived access tokens with refresh rotation and device/session management.</span></p>
+      </div>
+      <div class="feature-cell">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 18V13M11 18V8M18 18V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <h4><span data-fa-only>محدودیت‌های ریسک تعیین‌شده توسط کاربر</span><span data-en-only>User-Defined Risk Limits</span></h4>
+        <p><span data-fa-only>سقف ضرر، اهرم و اندازهٔ پوزیشن قبل از فعال‌سازی هر راهبرد قابل تنظیم است.</span><span data-en-only>Loss caps, leverage, and position sizing are configurable before any strategy activates.</span></p>
+      </div>
+      <div class="feature-cell">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="4" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M6.5 8.5H15.5M6.5 11.5H15.5M6.5 14.5H12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        <h4><span data-fa-only>ثبت رویداد تغییرناپذیر</span><span data-en-only>Append-Only Audit Events</span></h4>
+        <p><span data-fa-only>رویدادهای مالی و امنیتی هرگز حذف یا بازنویسی نمی‌شوند.</span><span data-en-only>Financial and security events are never deleted or silently rewritten.</span></p>
+      </div>
+      <div class="feature-cell">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3L3 6.5V11C3 15.5 6.4 19.5 11 20.5C15.6 19.5 19 15.5 19 11V6.5L11 3Z" stroke="currentColor" stroke-width="1.3"/><path d="M11 8V13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><circle cx="11" cy="15.5" r="0.8" fill="currentColor"/></svg>
+        <h4><span data-fa-only>لغو و ابطال فوری اتصال</span><span data-en-only>Instant Connection Revocation</span></h4>
+        <p><span data-fa-only>هر زمان می‌توانید اتصال صرافی را قطع و کلید را باطل کنید.</span><span data-en-only>You can disconnect an exchange and revoke a key at any time.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span data-fa-only>اشتراک</span><span data-en-only>Subscription</span></div>
+      <h2 class="section-title"><span data-fa-only>یک سطح خدمت، مدت‌های متفاوت</span><span data-en-only>One service level, flexible duration</span></h2>
+      <p class="section-desc"><span data-fa-only>قدرت خدمت در همهٔ پلن‌ها یکسان است؛ تنها متغیر، مدت اشتراک شماست. محاسبهٔ صرفه‌جویی همیشه شفاف نمایش داده می‌شود.</span><span data-en-only>Service power is identical across every plan — duration is the only variable. Savings math is always shown, never hidden behind a vague badge.</span></p>
+    </div>
+
+    <div class="pricing-panel reveal">
+      <div class="duration-row" id="durationRow">
+        <button class="dur-btn active" data-days="7" data-price="29">7<span data-fa-only>&nbsp;روز</span><span data-en-only>&nbsp;days</span></button>
+        <button class="dur-btn" data-days="30" data-price="89"><span data-fa-only>۱ ماه</span><span data-en-only>1 month</span></button>
+        <button class="dur-btn" data-days="90" data-price="229">
+          <span data-fa-only>۳ ماه</span><span data-en-only>3 months</span>
+          <span class="dur-badge">-14%</span>
+        </button>
+        <button class="dur-btn" data-days="180" data-price="399">
+          <span data-fa-only>۶ ماه</span><span data-en-only>6 months</span>
+          <span class="dur-badge">-25%</span>
+        </button>
+        <button class="dur-btn" data-days="365" data-price="649">
+          <span data-fa-only>۱ سال</span><span data-en-only>1 year</span>
+          <span class="dur-badge">-39%</span>
+        </button>
+      </div>
+
+      <div class="price-display">
+        <span class="price-num">$<span id="priceValue">29</span></span>
+        <span class="price-per" id="pricePer"><span data-fa-only>برای ۷ روز</span><span data-en-only>for 7 days</span></span>
+      </div>
+      <div class="price-math" id="priceMath" style="display:none"></div>
+
+      <ul class="entitlement-list">
+        <li class="entitlement-item"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 8L6 11.5L12.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-fa-only>اجرای خودکار روی صرافی متصل‌شدهٔ شما</span><span data-en-only>Automated execution on your connected exchange</span></li>
+        <li class="entitlement-item"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 8L6 11.5L12.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-fa-only>دسترسی به سه لایهٔ هوش تصمیم‌یار</span><span data-en-only>Access to all three decision-support layers</span></li>
+        <li class="entitlement-item"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 8L6 11.5L12.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-fa-only>کنترل کامل ریسک و اندازهٔ پوزیشن</span><span data-en-only>Full risk and position-sizing controls</span></li>
+        <li class="entitlement-item"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 8L6 11.5L12.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-fa-only>پشتیبانی فارسی و انگلیسی</span><span data-en-only>Persian &amp; English support</span></li>
+        <li class="entitlement-item"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 8L6 11.5L12.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-fa-only>لغو و ابطال کلید در هر زمان</span><span data-en-only>Cancel and revoke key access anytime</span></li>
+        <li class="entitlement-item"><svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M2.5 8L6 11.5L12.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-fa-only>تاریخچهٔ سیگنال و گزارش ممیزی</span><span data-en-only>Full signal history &amp; audit reports</span></li>
+      </ul>
+
+      <div class="pricing-cta">
+        <a href="#" class="btn btn-primary"><span data-fa-only>ادامهٔ خرید</span><span data-en-only>Continue to Checkout</span></a>
+        <span class="pricing-note"><span data-fa-only>در پایان دوره، اشتراک خودکار تمدید نمی‌شود مگر تأیید کنید.</span><span data-en-only>Subscriptions do not auto-renew unless you explicitly opt in.</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow"><span data-fa-only>پرسش‌های متداول</span><span data-en-only>FAQ</span></div>
+      <h2 class="section-title"><span data-fa-only>پاسخ شفاف به سؤالات واقعی</span><span data-en-only>Honest answers to real questions</span></h2>
+    </div>
+
+    <div class="faq-list reveal" style="max-width:820px">
+      <div class="faq-item open">
+        <button class="faq-q">
+          <span data-fa-only>آیا آیرن‌کوین می‌تواند دارایی من را برداشت کند؟</span><span data-en-only>Can IranCoin withdraw my funds?</span>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3V15M3 9H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner"><span data-fa-only>خیر. کلید API که ایجاد می‌شود فقط مجوز معامله دارد و دسترسی برداشت به‌طور کامل غیرفعال است. این محدودیت هم در سطح صرافی و هم در سطح سیستم اعمال می‌شود.</span><span data-en-only>No. The API key issued has trade-only scope, with withdrawal permission fully disabled — enforced both at the exchange level and inside the system.</span></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span data-fa-only>آیا سود تضمین می‌شود؟</span><span data-en-only>Is profit guaranteed?</span>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3V15M3 9H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner"><span data-fa-only>خیر و هرگز چنین ادعایی نمی‌کنیم. آیرن‌کوین ابزار اجرا و تحلیل ارائه می‌دهد؛ نتیجهٔ معاملات به بازار، ریسک انتخابی شما و شرایط اجرا بستگی دارد.</span><span data-en-only>No, and we never claim this. IranCoin provides execution and analytical tooling — outcomes depend on market conditions, your chosen risk settings, and execution circumstances.</span></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span data-fa-only>در صورت خطای هوش مصنوعی چه اتفاقی می‌افتد؟</span><span data-en-only>What happens if an AI layer fails or times out?</span>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3V15M3 9H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner"><span data-fa-only>خروجی هر لایه پیش از تأثیر بر هر اقدام، از فیلترهای اعتبارسنجی طرح‌واره و قوانین کسب‌وکار عبور می‌کند. در صورت خطا، تأخیر یا داده کهنه، سیستم به رفتار پیش‌فرض ایمن یا بازبینی انسانی برمی‌گردد.</span><span data-en-only>Every layer's output passes schema validation and business-rule checks before affecting any action. On failure, timeout, or stale data, the system falls back to a safe default or human review.</span></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span data-fa-only>چطور اشتراک را لغو کنم؟</span><span data-en-only>How do I cancel my subscription?</span>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3V15M3 9H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner"><span data-fa-only>از داشبورد حساب خود در هر زمان می‌توانید اشتراک را لغو و کلید API را ابطال کنید. لغو، تمدید خودکار دورهٔ بعد را متوقف می‌کند.</span><span data-en-only>You can cancel and revoke your API key from your account dashboard at any time. Cancellation stops the next renewal period.</span></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          <span data-fa-only>تفاوت اسپات و فیوچرز در آیرن‌کوین چیست؟</span><span data-en-only>What's the practical difference between spot and futures here?</span>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 3V15M3 9H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <div class="faq-a"><div class="faq-a-inner"><span data-fa-only>اسپات دارایی زیربنایی را مستقیماً خرید/فروش می‌کند و فیوچرز یک قرارداد اهرم‌دار با ریسک نقدشوندگی و فاندینگ است. جزئیات هر حالت در بخش «بازارها» بالای همین صفحه توضیح داده شده.</span><span data-en-only>Spot buys or sells the underlying asset directly; futures are leveraged contracts carrying liquidation and funding risk. Full detail is in the Markets section above.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2><span data-fa-only>پیش از شروع، همه‌چیز را شفاف ببینید</span><span data-en-only>See everything clearly before you start</span></h2>
+      <p><span data-fa-only>یک کلید API محدود بسازید، محدودیت‌های ریسک خود را تنظیم کنید و هر رویداد را از همان لحظهٔ اول ممیزی‌شده ببینید.</span><span data-en-only>Create a scoped API key, set your own risk limits, and watch every event get audited from the first moment.</span></p>
+      <div class="btn-row">
+        <a href="#pricing" class="btn btn-primary"><span data-fa-only>مشاهدهٔ پلن‌ها</span><span data-en-only>View Plans</span></a>
+        <a href="#faq" class="btn btn-ghost"><span data-fa-only>پرسش‌های متداول</span><span data-en-only>Read FAQ</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand">
+          <svg class="brand-mark" viewBox="0 0 32 32" fill="none"><path d="M16 2 L29 9 V23 L16 30 L3 23 V9 Z" stroke="currentColor" stroke-width="1.4" opacity="0.5"/><path d="M16 8 L23 12 V20 L16 24 L9 20 V12 Z" fill="var(--gold)"/></svg>
+          <span data-en-only>IranCoin</span><span data-fa-only>آیرن‌کوین</span>
+        </a>
+        <p><span data-fa-only>فناوری اجرای معامله و تصمیم‌یاری تحلیلی. یک خدمت فناوری‌محور، نه یک نهاد مشاورهٔ مالی مجاز.</span><span data-en-only>Execution and decision-support technology. A technology service — not a licensed financial advisory entity.</span></p>
+      </div>
+      <div class="footer-col">
+        <h5><span data-fa-only>محصول</span><span data-en-only>Product</span></h5>
+        <ul>
+          <li><a href="#markets"><span data-fa-only>بازارها</span><span data-en-only>Markets</span></a></li>
+          <li><a href="#pipeline"><span data-fa-only>نحوهٔ کار</span><span data-en-only>How It Works</span></a></li>
+          <li><a href="#pricing"><span data-fa-only>اشتراک</span><span data-en-only>Pricing</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5><span data-fa-only>شرکت</span><span data-en-only>Company</span></h5>
+        <ul>
+          <li><a href="#security"><span data-fa-only>امنیت</span><span data-en-only>Security</span></a></li>
+          <li><a href="#faq"><span data-fa-only>پرسش‌ها</span><span data-en-only>FAQ</span></a></li>
+          <li><a href="#"><span data-fa-only>وضعیت سیستم</span><span data-en-only>Status</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5><span data-fa-only>حقوقی</span><span data-en-only>Legal</span></h5>
+        <ul>
+          <li><a href="#"><span data-fa-only>افشای ریسک</span><span data-en-only>Risk Disclosure</span></a></li>
+          <li><a href="#"><span data-fa-only>حریم خصوصی</span><span data-en-only>Privacy Policy</span></a></li>
+          <li><a href="#"><span data-fa-only>شرایط استفاده</span><span data-en-only>Terms of Service</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <p><span data-fa-only>© ۲۰۲۶ آیرن‌کوین. معامله در بازارهای رمزارز و فارکس دارای ریسک از دست دادن سرمایه است. عملکرد گذشته نشان‌دهندهٔ نتایج آینده نیست. این وب‌سایت مشاورهٔ سرمایه‌گذاری، حقوقی یا مالیاتی ارائه نمی‌دهد.</span><span data-en-only>© 2026 IranCoin. Trading crypto and FX carries a risk of capital loss. Past performance does not indicate future results. This website does not provide investment, legal, or tax advice.</span></p>
+      <div class="footer-bottom-links">
+        <a href="#"><span data-fa-only>سیاست کوکی</span><span data-en-only>Cookie Policy</span></a>
+        <a href="#"><span data-fa-only>دسترسی‌پذیری</span><span data-en-only>Accessibility</span></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
